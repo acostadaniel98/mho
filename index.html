@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Outlanders</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ember-bg" aria-hidden="true"></div>
+
+  <main class="cabinet" id="cabinet">
+    <header class="marquee">
+      <div class="rune">◆</div>
+      <div class="titles">
+      <img id="logo" src="assets/logoMHO.png" alt="Outlanders">
+        <p id="subtitle"></p>
+      </div>
+      <div class="rune">◆</div>
+    </header>
+
+    <section class="frame">
+      <div class="rivets"><i></i><i></i><i></i><i></i></div>
+      <div class="reels-window" id="reelsWindow">
+        <div class="reels" id="reels"></div>
+      </div>
+    </section>
+
+    <div class="message" id="message">Pulsa GIRAR para sortear tu build</div>
+
+    <section class="result" id="result" aria-live="polite"></section>
+
+    <section class="panel">
+      <div class="left">
+        <div class="chips" id="chips"></div>
+        <div class="actions">
+          <button class="toggle" id="turbo" title="Modo turbo">⚡ TURBO</button>
+          <button class="toggle" id="mute" title="Sonido">🔊</button>
+          <button class="toggle" id="filters" title="Elegir qué opciones pueden salir">⚙ FILTROS</button>
+          <button class="toggle" id="history" title="Últimos builds">☰ HISTORIAL</button>
+          <button class="toggle" id="copy" title="Copiar build al portapapeles">⧉ COPIAR</button>
+        </div>
+      </div>
+
+      <button class="spin" id="spin">
+        <span id="spinLabel">GIRAR</span>
+      </button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <div class="modal" id="modalFilters" hidden>
+    <div class="modal-card">
+      <button class="close" data-close aria-label="Cerrar">✕</button>
+      <h2>FILTROS</h2>
+      <p class="hint">Toca una opción para sacarla o meterla del sorteo. Se guarda en tu navegador.</p>
+      <div id="filterBody"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="modalHistory" hidden>
+    <div class="modal-card">
+      <button class="close" data-close aria-label="Cerrar">✕</button>
+      <h2>HISTORIAL</h2>
+      <div id="historyBody"></div>
+      <div class="modal-actions"><button class="toggle" id="clearHistory">BORRAR HISTORIAL</button></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
